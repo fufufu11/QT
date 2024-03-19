@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>430</width>
+    <height>282</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMenuBar {
+ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+ stop:0 lightgray, stop:1 darkgray);
+ spacing: 6px; /* spacing between menu bar items */
+}
+QMenuBar::item {
+ padding: 3px 10px;
+ background-color: rgb(0, 255, 0);
+ border-radius: 3px;
+}
+QMenuBar::item:selected { /* when selected using mouse or keyboard */
+ background: #a8a8a8;
+}
+QMenuBar::item:pressed {
+ background: #888888;
+}
+
+QMenu {
+ background-color: white;
+ margin: 0 2px; /* some spacing around the menu */
+}
+
+QMenu::item {
+ padding: 2px 25px 2px 20px;
+ border: 3px solid transparent; /* reserve space for selection border */
+}
+QMenu::item:selected {
+ border-color: darkblue;
+ background: rgba(100, 100, 100, 150);
+}
+QMenu::separator {
+ height: 2px;
+ background: lightblue;
+ margin-left: 10px;
+ margin-right: 5px;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>430</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="action111"/>
+    <addaction name="action222"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>保存</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action111">
+   <property name="text">
+    <string>111</string>
+   </property>
+  </action>
+  <action name="action222">
+   <property name="text">
+    <string>222</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
